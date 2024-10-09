@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hello_world/basic_widgets/text_widget.dart';
 import 'package:hello_world/basic_widgets/image_widget.dart';
+import 'package:flutter/cupertino.dart';
 
 //Test-Widgets
 // void main() {
@@ -71,6 +72,73 @@ import 'package:hello_world/basic_widgets/image_widget.dart';
 // }
 
 //image-widgets
+// void main() {
+//   runApp(const MyApp());
+// }
+
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       title: 'Flutter Demo',
+//       theme: ThemeData(
+//         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+//         useMaterial3: true,
+//       ),
+//       home: const MyHomePage(title: 'Flutter Demo Home Page'),
+//     );
+//   }
+// }
+
+// class MyHomePage extends StatefulWidget {
+//   const MyHomePage({super.key, required this.title});
+
+//   final String title;
+
+//   @override
+//   State<MyHomePage> createState() => _MyHomePageState();
+// }
+
+// class _MyHomePageState extends State<MyHomePage> {
+//   int _counter = 0;
+
+//   void _incrementCounter() {
+//     setState(() {
+//       _counter++;
+//     });
+//   }
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+//         title: Text(widget.title),
+//       ),
+//       body: Center(
+//         child: Column(
+//           mainAxisAlignment: MainAxisAlignment.center,
+//           children: <Widget>[
+//             MyImageWidget(),  // Menggunakan MyImageWidget
+//             Text(
+//               '$_counter',
+//               style: Theme.of(context).textTheme.headlineMedium,
+//             ),
+//           ],
+//         ),
+//       ),
+//       floatingActionButton: FloatingActionButton(
+//         onPressed: _incrementCounter,
+//         tooltip: 'Increment',
+//         child: const Icon(Icons.add),
+//       ),
+//     );
+//   }
+// }
+
+//loading-widgets
 void main() {
   runApp(const MyApp());
 }
@@ -81,57 +149,20 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
-      ),
-      body: Center(
+      home: Container(
+        margin: const EdgeInsets.only(top: 30),
+        color: Colors.white,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            MyImageWidget(),  // Menggunakan MyImageWidget
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
+            CupertinoButton(
+              child: const Text("Contoh button"),
+              onPressed: () {
+                // Aksi saat tombol ditekan
+              },
             ),
+            const CupertinoActivityIndicator(),  // Loading indicator gaya iOS
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
       ),
     );
   }
