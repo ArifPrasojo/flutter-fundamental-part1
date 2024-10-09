@@ -139,29 +139,58 @@ import 'package:flutter/cupertino.dart';
 // }
 
 //loading-widgets
+// void main() {
+//   runApp(const MyApp());
+// }
+
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Container(
+//         margin: const EdgeInsets.only(top: 30),
+//         color: Colors.white,
+//         child: Column(
+//           children: <Widget>[
+//             CupertinoButton(
+//               child: const Text("Contoh button"),
+//               onPressed: () {
+//                 // Aksi saat tombol ditekan
+//               },
+//             ),
+//             const CupertinoActivityIndicator(),  // Loading indicator gaya iOS
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
 void main() {
-  runApp(const MyApp());
+  runApp(const FabWidget());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class FabWidget extends StatelessWidget {
+  const FabWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Container(
-        margin: const EdgeInsets.only(top: 30),
-        color: Colors.white,
-        child: Column(
-          children: <Widget>[
-            CupertinoButton(
-              child: const Text("Contoh button"),
-              onPressed: () {
-                // Aksi saat tombol ditekan
-              },
-            ),
-            const CupertinoActivityIndicator(),  // Loading indicator gaya iOS
-          ],
+      home: Scaffold(
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            // Aksi saat tombol FAB ditekan
+            // Anda dapat menambahkan kode di sini
+          },
+          child: const Icon(Icons.thumb_up),
+          backgroundColor: Colors.pink,
+        ),
+        appBar: AppBar(
+          title: const Text('Contoh FloatingActionButton'),
+        ),
+        body: const Center(
+          child: Text('Tekan tombol di bawah'),
         ),
       ),
     );
