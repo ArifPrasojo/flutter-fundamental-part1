@@ -1,16 +1,30 @@
-# hello_world
+# Praktikum Flutter Pertemuan 6
 
-A new Flutter project.
+## Identitas
+- **NIM**: 2241760100
+- **Nama**: Arif Prasojo.
+- **Kelas**: SIB - 3E
 
-## Getting Started
+## Deskripsi Praktikum
+Aplikasi Flutter ini adalah hasil dari serangkaian praktikum yang melibatkan beberapa aspek dasar Flutter, termasuk penggunaan widget seperti `FloatingActionButton`, `BottomAppBar`, dan menampilkan gambar dari `assets`dan beberapa kompenen dasar terkait yang dipelajari pada praktikum 1 - 6
 
-This project is a starting point for a Flutter application.
+## Hasil Akhir 
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 1. **Connecting To Device**
+![Text Widget](images/01.png)
+### 2. **Text Widget**
+![Text Widget](images/02.png)
+### 3. **Image Widget**
+![Text Widget](images/03.png)
+### 4. **Cupertino Button dan Loading Bar**
+![Text Widget](images/04.png)
+### 5. **Floating Action Button (FAB)**
+![Text Widget](images/05.png)
+### 6. **Scaffold Widget**
+![Text Widget](images/06.png)
+### 7. **Dialog Widget**
+![Text Widget](images/07.png)
+### 8. **Input dan Selection Widget**
+![Text Widget](images/08.png)
+### 9. **Date and Time Pickers**
+![Text Widget](images/09.png)
